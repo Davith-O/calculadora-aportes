@@ -1,4 +1,4 @@
-# 💰 Calculadora de Aportes para Trabajadores Dependientes
+# Calculadora de Aportes para Trabajadores Dependientes
 
 Aplicación web para calcular los aportes a seguridad social de un trabajador dependiente en Colombia. Calcula automáticamente las contribuciones a Salud, Pensión, ARL y Caja de Compensación según el salario ingresado y el nivel de riesgo laboral.
 
