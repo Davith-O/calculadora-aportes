@@ -40,7 +40,7 @@ Cómo ejecutar localmente
 
 2. **Entra a la carpeta del proyecto:**
    ```bash
-   cd calculadora-salarial
+   cd calculadora-aportes
    ```
 
 3. **Abre el archivo principal en tu navegador:**
