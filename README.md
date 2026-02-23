@@ -6,7 +6,7 @@ Aplicación web para calcular los aportes a seguridad social de un trabajador de
 
  Demo en vivo
 
-🔗 [Ver proyecto en GitHub Pages](https://Davith-O.github.io/calculadora-salarial/)
+🔗 [Ver proyecto en GitHub Pages](https://Davith-O.github.io/calculadora-aportes/)
 
 ---
 
@@ -41,7 +41,7 @@ Cómo ejecutar localmente
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/Davith-O/calculadora-salarial.git
+   git clone https://github.com/Davith-O/calculadora-aportes.git
    ```
 
 2. **Entra a la carpeta del proyecto:**
@@ -104,6 +104,6 @@ calculadora-salarial/
 Autor
 
 Juan David Orozco
-- GitHub: [@Davith-O](https://github.com/TU_USUARIO)
+- GitHub: [@Davith-O](https://github.com/Davith-O)
 
 ---
