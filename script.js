@@ -90,6 +90,11 @@ function recalcularTotal() {
     const incluirPension = document.getElementById('incluir-pension').checked;
     const incluirCaja    = document.getElementById('incluir-caja').checked;
 
+    // Actualizar valores individuales: mostrar $0 si está desmarcado
+    document.getElementById('aporte-salud').textContent   = formatearMoneda(incluirSalud   ? aporteSalud   : 0);
+    document.getElementById('aporte-pension').textContent = formatearMoneda(incluirPension ? aportePension : 0);
+    document.getElementById('aporte-caja').textContent    = formatearMoneda(incluirCaja    ? aporteCaja    : 0);
+
     // Total solo suma los aportes activados (ARL siempre incluida)
     const total = 
         (incluirSalud   ? aporteSalud   : 0) +
