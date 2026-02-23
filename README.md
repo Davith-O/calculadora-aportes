@@ -10,12 +10,6 @@ Aplicación web para calcular los aportes a seguridad social de un trabajador de
 
 ---
 
-Vista previa
-
-![Calculadora de Aportes](https://via.placeholder.com/800x400?text=Calculadora+de+Aportes)
-
----
-
 Tecnologías utilizadas
 
 | Tecnología | Descripción |
