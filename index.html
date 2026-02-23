@@ -50,6 +50,7 @@
                     </select>
                 </div>
 
+                <!-- NUEVAS OPCIONES: Seleccionar qué aportes incluir -->
                 <div class="grupo-campo">
                     <label>Aportes a incluir en el cálculo</label>
                     <div class="opciones-aportes">
@@ -69,7 +70,7 @@
                             <span class="toggle-texto">Caja de Compensación <span class="toggle-porcentaje">(4%)</span></span>
                         </label>
                         <div class="info-arl-fijo">
-                            ARL siempre incluida (obligatoria por ley)
+                            🔒 ARL siempre incluida (obligatoria por ley)
                         </div>
                     </div>
                 </div>
@@ -88,13 +89,19 @@
                         <span class="valor-resultado" id="salario-base">$0</span>
                     </div>
 
-                    <div class="item-resultado">
-                        <span class="etiqueta-resultado">Salud (4%)</span>
+                    <div class="item-resultado" id="fila-salud">
+                        <span class="etiqueta-resultado">
+                            Salud (4%)
+                            <span class="badge-omitido" id="badge-salud" style="display:none;">Omitido</span>
+                        </span>
                         <span class="valor-resultado" id="aporte-salud">$0</span>
                     </div>
 
-                    <div class="item-resultado">
-                        <span class="etiqueta-resultado">Pensión (16%)</span>
+                    <div class="item-resultado" id="fila-pension">
+                        <span class="etiqueta-resultado">
+                            Pensión (16%)
+                            <span class="badge-omitido" id="badge-pension" style="display:none;">Omitido</span>
+                        </span>
                         <span class="valor-resultado" id="aporte-pension">$0</span>
                     </div>
 
@@ -106,8 +113,11 @@
                         <span class="valor-resultado" id="aporte-arl">$0</span>
                     </div>
 
-                    <div class="item-resultado">
-                        <span class="etiqueta-resultado">Caja de Compensación (4%)</span>
+                    <div class="item-resultado" id="fila-caja">
+                        <span class="etiqueta-resultado">
+                            Caja de Compensación (4%)
+                            <span class="badge-omitido" id="badge-caja" style="display:none;">Omitido</span>
+                        </span>
                         <span class="valor-resultado" id="aporte-caja">$0</span>
                     </div>
 
