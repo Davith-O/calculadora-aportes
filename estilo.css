@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #296374; 
+  --primary-dark: #0c2c55; 
+  --secondary-color: #629fad;
+  --background: #ededce; 
+  --card-bg: #ffffff; 
+  --text-primary: #0c2c55; 
+  --text-secondary: #296374; 
+  --border-color: #629fad;
+  --shadow: 0 10px 25px rgba(12, 44, 85, 0.12); 
+  --shadow-hover: 0 15px 35px rgba(12, 44, 85, 0.18);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0C2C55 0%, #296374 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.encabezado h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.encabezado p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.tarjeta-calculadora {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta-calculadora:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.seccion-formulario {
+  margin-bottom: 30px;
+}
+
+.seccion-formulario h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.grupo-campo {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.contenedor-input {
+  position: relative;
+}
+
+.simbolo-moneda {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 14px 20px;
+  padding-left: 40px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  background: var(--background);
+}
+
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+select {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.boton-calcular {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.boton-calcular:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(41, 99, 116, 0.3);
+}
+
+.boton-calcular:active {
+  transform: translateY(0);
+}
+
+.resultados {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  background: var(--background);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.item-resultado:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+.etiqueta-resultado {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.valor-resultado {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.seccion-total {
+  margin-top: 25px;
+  padding: 25px;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #296374 100%);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(98, 159, 173, 0.3);
+}
+
+.seccion-total .item-resultado {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.seccion-total .etiqueta-resultado,
+.seccion-total .valor-resultado {
+  color: white;
+}
+
+.seccion-total .valor-resultado {
+  font-size: 1.5rem;
+}
+
+.etiqueta-info {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.info-salario-minimo {
+  background: #ededce;
+  border-left: 4px solid var(--primary-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #0C2C55;
+}
+
+.pie-pagina {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .encabezado h1 {
+    font-size: 2rem;
+  }
+
+  .tarjeta-calculadora {
+    padding: 25px;
+  }
+
+  .item-resultado {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

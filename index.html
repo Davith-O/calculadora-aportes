@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Aportes para Dependientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="encabezado">
+            <h1>Calculadora de Aportes</h1>
+            <p>Para Trabajadores Dependientes</p>
+        </div>
+
+        <div class="tarjeta-calculadora">
+            <div class="seccion-formulario">
+                <h2>Datos del Salario</h2>
+                
+                <div class="info-salario-minimo">
+                    <strong>Información:</strong> El salario mínimo legal vigente para 2026 es de <strong>$1.750.905 COP</strong>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="salario">Salario Mensual</label>
+                    <div class="contenedor-input">
+                        <span class="simbolo-moneda">$</span>
+                        <input 
+                            type="number" 
+                            id="salario" 
+                            placeholder="Ingrese el salario mensual"
+                            min="0"
+                            step="1000"
+                        >
+                    </div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="nivel-riesgo">Nivel de Riesgo ARL</label>
+                    <select id="nivel-riesgo">
+                        <option value="">Seleccione el nivel de riesgo</option>
+                        <option value="1">Riesgo 1 - 0.522% (Actividades administrativas)</option>
+                        <option value="2">Riesgo 2 - 1.044% (Comercio, servicios)</option>
+                        <option value="3">Riesgo 3 - 2.436% (Manufactura, industria)</option>
+                        <option value="4">Riesgo 4 - 4.350% (Construcción, transporte)</option>
+                        <option value="5">Riesgo 5 - 6.960% (Minería, petróleo)</option>
+                    </select>
+                </div>
+
+                <button class="boton-calcular" onclick="calcularAportes()">
+                    Calcular Aportes
+                </button>
+            </div>
+
+            <div id="resultados" class="resultados">
+                <div class="seccion-formulario">
+                    <h2>Resultados del Cálculo</h2>
+                    
+                    <div class="item-resultado">
+                        <span class="etiqueta-resultado">Salario Base</span>
+                        <span class="valor-resultado" id="salario-base">$0</span>
+                    </div>
+
+                    <div class="item-resultado">
+                        <span class="etiqueta-resultado">Salud (4%)</span>
+                        <span class="valor-resultado" id="aporte-salud">$0</span>
+                    </div>
+
+                    <div class="item-resultado">
+                        <span class="etiqueta-resultado">Pensión (16%)</span>
+                        <span class="valor-resultado" id="aporte-pension">$0</span>
+                    </div>
+
+                    <div class="item-resultado">
+                        <span class="etiqueta-resultado">
+                            ARL
+                            <span class="etiqueta-info" id="porcentaje-arl">0%</span>
+                        </span>
+                        <span class="valor-resultado" id="aporte-arl">$0</span>
+                    </div>
+
+                    <div class="item-resultado">
+                        <span class="etiqueta-resultado">Caja de Compensación (4%)</span>
+                        <span class="valor-resultado" id="aporte-caja">$0</span>
+                    </div>
+
+                    <div class="seccion-total">
+                        <div class="item-resultado">
+                            <span class="etiqueta-resultado">TOTAL A PAGAR</span>
+                            <span class="valor-resultado" id="total-aportes">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pie-pagina">
+            <p>Calculadora de Aportes para Dependientes 2026 | Desarrollado para prueba técnica</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
