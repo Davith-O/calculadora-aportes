@@ -50,6 +50,30 @@
                     </select>
                 </div>
 
+                <div class="grupo-campo">
+                    <label>Aportes a incluir en el cálculo</label>
+                    <div class="opciones-aportes">
+                        <label class="toggle-opcion">
+                            <input type="checkbox" id="incluir-salud" checked onchange="recalcularTotal()">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-texto">Salud <span class="toggle-porcentaje">(4%)</span></span>
+                        </label>
+                        <label class="toggle-opcion">
+                            <input type="checkbox" id="incluir-pension" checked onchange="recalcularTotal()">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-texto">Pensión <span class="toggle-porcentaje">(16%)</span></span>
+                        </label>
+                        <label class="toggle-opcion">
+                            <input type="checkbox" id="incluir-caja" checked onchange="recalcularTotal()">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-texto">Caja de Compensación <span class="toggle-porcentaje">(4%)</span></span>
+                        </label>
+                        <div class="info-arl-fijo">
+                            ARL siempre incluida (obligatoria por ley)
+                        </div>
+                    </div>
+                </div>
+
                 <button class="boton-calcular" onclick="calcularAportes()">
                     Calcular Aportes
                 </button>

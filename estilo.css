@@ -55,9 +55,7 @@ body {
   padding: 40px;
   box-shadow: var(--shadow);
   margin-bottom: 30px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta-calculadora:hover {
@@ -132,11 +130,7 @@ select {
 .boton-calcular {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--primary-dark) 100%
-  );
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -150,8 +144,8 @@ select {
 }
 
 .boton-calcular:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(41, 99, 116, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(41, 99, 116, 0.3);
 }
 
 .boton-calcular:active {
@@ -164,14 +158,8 @@ select {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .item-resultado {
@@ -195,6 +183,10 @@ select {
   font-weight: 500;
   color: var(--text-primary);
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .valor-resultado {
@@ -203,6 +195,113 @@ select {
   font-size: 1.1rem;
 }
 
+/* ─── Fila omitida ─── */
+.item-omitido {
+  opacity: 0.45;
+  border-left-color: #aaa;
+  background: #f5f5f5;
+}
+
+.item-omitido .valor-resultado {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Badge "Omitido" */
+.badge-omitido {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ─── Sección de opciones de aportes (toggles) ─── */
+.opciones-aportes {
+  background: var(--background);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Toggle switch */
+.toggle-opcion {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+.toggle-opcion input[type="checkbox"] {
+  display: none; /* Ocultamos el checkbox nativo */
+}
+
+.toggle-slider {
+  position: relative;
+  width: 46px;
+  min-width: 46px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Cuando el checkbox está marcado */
+.toggle-opcion input[type="checkbox"]:checked + .toggle-slider {
+  background: var(--primary-color);
+}
+
+.toggle-opcion input[type="checkbox"]:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+
+.toggle-texto {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toggle-porcentaje {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Nota ARL fija */
+.info-arl-fijo {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: rgba(41, 99, 116, 0.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* ─── Total ─── */
 .seccion-total {
   margin-top: 25px;
   padding: 25px;
@@ -225,6 +324,7 @@ select {
 
 .seccion-total .valor-resultado {
   font-size: 1.5rem;
+  transition: all 0.4s ease;
 }
 
 .etiqueta-info {
