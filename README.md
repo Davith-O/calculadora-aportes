@@ -6,7 +6,7 @@ Aplicación web para calcular los aportes a seguridad social de un trabajador de
 
  Demo en vivo
 
-🔗 [Ver proyecto en GitHub Pages](https://Davith-O.github.io/calculadora-aportes/)
+🔗 [Ver proyecto en GitHub Pages](https://davith-o.github.io/calculadora-aportes/)
 
 ---
 
